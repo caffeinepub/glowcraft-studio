@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* GlowCraft Studio — Warm Luxury Palette */
+    /* Backgrounds */
+    --background: 1 0 0; /* #FFFFFF white */
+    --foreground: 0.22 0 0; /* #2B2B2B near-black */
+    --card: 0.95 0.012 78; /* #F3EFE7 cream */
+    --card-foreground: 0.22 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0 0;
+
+    /* Beige accent = primary */
+    --primary: 0.77 0.038 72; /* #CBB89F tan beige */
+    --primary-foreground: 0.22 0 0;
+
+    /* Off-white secondary */
+    --secondary: 0.965 0.008 78; /* #F7F4EF warm off-white */
+    --secondary-foreground: 0.22 0 0;
+
+    --muted: 0.965 0.008 78;
+    --muted-foreground: 0.48 0 0; /* #6B6B6B mid-gray */
+    --accent: 0.82 0.035 75; /* #D8C8B3 light beige */
+    --accent-foreground: 0.22 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.9 0.009 78; /* #E5E1DA warm border */
+    --input: 0.9 0.009 78;
+    --ring: 0.77 0.038 72;
+
+    /* Warm beige footer bg */
+    --footer-bg: 0.945 0.015 78;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.22 0 0;
+    --sidebar-primary: 0.77 0.038 72;
+    --sidebar-primary-foreground: 0.22 0 0;
+    --sidebar-accent: 0.965 0.008 78;
+    --sidebar-accent-foreground: 0.22 0 0;
+    --sidebar-border: 0.9 0.009 78;
+    --sidebar-ring: 0.77 0.038 72;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .font-sans {
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+
+  /* Scroll-triggered fade-in */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+  }
+
+  .stagger-1 {
+    transition-delay: 0.1s;
+  }
+  .stagger-2 {
+    transition-delay: 0.2s;
+  }
+  .stagger-3 {
+    transition-delay: 0.3s;
+  }
+  .stagger-4 {
+    transition-delay: 0.4s;
+  }
+}

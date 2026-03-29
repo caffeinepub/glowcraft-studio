@@ -279,16 +279,9 @@ function ServicesSection() {
                 <p className="font-sans text-xs text-primary font-medium tracking-wide mb-3 italic">
                   {service.desc}
                 </p>
-                <p className="font-sans text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="font-sans text-sm text-muted-foreground leading-relaxed">
                   {service.detail}
                 </p>
-                <button
-                  type="button"
-                  className="font-sans text-xs font-semibold tracking-[0.12em] uppercase text-foreground border-b border-foreground pb-0.5 hover:border-primary hover:text-primary transition-colors"
-                  data-ocid={`services.link.${i + 1}`}
-                >
-                  Learn More
-                </button>
               </div>
             </div>
           ))}
